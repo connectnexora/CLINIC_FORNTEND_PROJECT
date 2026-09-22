@@ -1,0 +1,28 @@
+/* Breakpoints: 320 / 375 / 425 / 768 / 1024 / 1280 / 1440 / 1920 */
+@media(max-width:1024px){
+  .tgrid{grid-template-columns:repeat(2,1fr)}
+  .grid6{grid-template-columns:repeat(2,1fr)}
+  .strip .wrap{grid-template-columns:repeat(2,1fr);gap:18px}
+  .qual{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:860px){
+  .nav-links,#nav .btn{display:none}
+  #burger{display:block}
+  .hero-grid,.split,.rc-wrap,.anat{grid-template-columns:1fr}
+  #rcDetail{position:static}
+  .fgrid{grid-template-columns:1fr}
+  form.book-grid{grid-template-columns:1fr}
+  .ggrid{grid-template-columns:repeat(2,1fr)}
+  .mobile-cta{display:grid}
+  footer{padding-bottom:170px}
+  .floats{bottom:150px}
+  #chatFab{bottom:150px}
+  #chatWin{bottom:210px}
+  section{padding:60px 0}
+}
+@media(max-width:520px){
+  .grid6,.tgrid,.ggrid{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr}
+  .hero-cta .btn{flex:1;justify-content:center}
+}
+@media(min-width:1920px){ .wrap,.nav-inner{max-width:1400px} }
