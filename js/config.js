@@ -1,17 +1,18 @@
-/* Clinic-specific configuration — replace placeholders with verified info */
+/* Clinic-specific configuration — verified real clinic information */
 const clinicConfig = {
   name: "Dr. Jamodkar's Advanced Root Canal & Multispeciality Dental Clinic",
   shortName: "Dr. Jamodkar's",
   location: "Wakad, Pune, Maharashtra, India",
-  address: "Wakad, Pune, Maharashtra, India (add verified street address)",
-  phone: "", // e.g. "+919000000000" — leave empty until verified
-  phoneDisplay: "Call Clinic",
-  whatsapp: "", // e.g. "919000000000"
-  email: "",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Dentist+Wakad+Pune",
+  address: "Shop No. 206, 2nd Floor, Sentosa Elite, Kaspate Wasti Rd, Kaspate Wasti, Wakad, Pune, Pimpri-Chinchwad, Maharashtra 411057",
+  phone: "+919028990705", // verified clinic phone
+  phoneDisplay: "+91 90289 90705",
+  whatsapp: "919028990705", // derived from verified clinic phone
+  email: "bestrctinwakad@gmail.com",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Dr+Jamodkar+Advanced+Root+Canal+Multispeciality+Dental+Clinic+Sentosa+Elite+Kaspate+Wasti+Wakad+Pune+411057",
+  mapsEmbed: "https://www.google.com/maps?q=Sentosa+Elite+Kaspate+Wasti+Road+Wakad+Pune+Maharashtra+411057&output=embed",
   website: "https://bestrctinwakad.com/",
   bookingUrl: "",
-  hoursNote: "Hours available on request — contact clinic to confirm.",
-  social: { instagram: "", facebook: "", youtube: "" }
+  hoursNote: "Contact the clinic to confirm visiting hours.",
+  social: { instagram: "https://www.instagram.com/drjamodkarsdentalclinic", facebook: "https://www.facebook.com/DrJamodkarsDentalClinic", youtube: "" }
 };
 window.clinicConfig = clinicConfig;

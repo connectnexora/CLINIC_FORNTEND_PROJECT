@@ -24,5 +24,7 @@
   .grid6,.tgrid,.ggrid{grid-template-columns:1fr}
   .trust{grid-template-columns:1fr}
   .hero-cta .btn{flex:1;justify-content:center}
+  .loc-card iframe{height:240px}
+  .hero-rating{flex-wrap:wrap}
 }
 @media(min-width:1920px){ .wrap,.nav-inner{max-width:1400px} }

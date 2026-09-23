@@ -4,9 +4,15 @@
   const modal=document.getElementById('treatModal');
   function card(t){
     const el=document.createElement('article');
-    el.className='tcard rv';el.tabIndex=0;el.setAttribute('data-cursor','VIEW');
+    el.className='tcard rv'+(t.id==='rct'?' featured':'');el.tabIndex=0;el.setAttribute('data-cursor','VIEW');
     el.innerHTML=`<div class="t-ic">${t.icon}</div><div class="t-tag">${t.tag}${t.placeholder?' · Placeholder':''}</div><h3></h3><p></p><button class="link">Learn More →</button>`;
     el.querySelector('h3').textContent=t.name; el.querySelector('p').textContent=t.short;
+    if(t.img){
+      const im=document.createElement('img');
+      im.src=t.img; im.alt=t.name+' at Dr. Jamodkar\'s clinic, Wakad';
+      im.loading='lazy'; im.decoding='async'; im.className='t-img';
+      el.prepend(im);
+    }
     el.addEventListener('click',()=>open(t)); el.addEventListener('keydown',(e)=>{if(e.key==='Enter')open(t);});
     // tilt
     el.addEventListener('pointermove',(e)=>{
@@ -31,6 +37,8 @@
     modal.classList.add('open'); document.body.classList.add('lock');
     modal.querySelector('#tmName').textContent=t.name;
     modal.querySelector('#tmShort').textContent=t.short;
+    const tmImg=modal.querySelector('#tmImg');
+    if(tmImg){ if(t.img){tmImg.src=t.img;tmImg.alt=t.name+' at Dr. Jamodkar\'s clinic';tmImg.hidden=false;} else {tmImg.hidden=true;tmImg.removeAttribute('src');} }
     modal.querySelector('#tmWhat').textContent=t.what;
     modal.querySelector('#tmWhen').textContent='May be discussed for: '+t.when.join(', ')+'. Final advice needs clinical evaluation.';
     modal.querySelector('#tmExpect').textContent=t.expect;
