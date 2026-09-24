@@ -10,7 +10,17 @@
   #burger{display:block}
   .hero-grid,.split,.rc-wrap,.anat{grid-template-columns:1fr}
   #rcDetail{position:static}
-  .fgrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr;gap:14px}
+  .f-brand{background:var(--surface-soft);border:1px solid var(--border);border-radius:16px;padding:18px}
+  .f-col{background:var(--surface-soft);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+  .f-head{display:flex;align-items:center;justify-content:space-between;width:100%;padding:15px 16px;margin:0;font-size:.98rem;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .f-head .f-arrow{display:flex;align-items:center;justify-content:center;width:28px;height:28px;flex:none;border-radius:50%;background:var(--surface);border:1px solid var(--border);color:var(--primary);font-size:1.15rem;font-weight:800;line-height:1;transition:transform .3s,background .3s,color .3s}
+  .f-col.open .f-arrow{transform:rotate(45deg);background:var(--primary);border-color:var(--primary);color:#fff}
+  .f-links{max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 16px}
+  .f-col.open .f-links{max-height:320px;padding-bottom:14px}
+  .f-links a{padding:10px 2px;border-top:1px solid var(--border);font-size:.92rem}
+  .f-links a:first-child{border-top:0}
+  footer .f-brand p{margin-bottom:0}
   form.book-grid{grid-template-columns:1fr}
   .ggrid{grid-template-columns:repeat(2,1fr)}
   #docGrid,.grid6.cols-2{grid-template-columns:1fr}
@@ -22,6 +32,12 @@
   section{padding:60px 0}
 }
 @media(max-width:520px){
+  footer{padding:36px 0 170px}
+  .f-brand{padding:16px}
+  /* Clinic video: GIF-like full-width */
+  .video-card{margin-left:-22px;margin-right:-22px;padding:0;border-radius:0;border-left:0;border-right:0}
+  .video-card .small.muted{padding:0 22px 18px}
+  .clinic-video{width:100%;max-height:none;aspect-ratio:16/10;object-fit:cover;border-radius:0}
   .grid6,.grid6.cols-2,#techGrid,#docGrid,.tgrid,.ggrid{grid-template-columns:1fr}
   .trust{grid-template-columns:1fr}
   .hero-cta .btn{flex:1;justify-content:center}

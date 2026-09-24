@@ -627,13 +627,17 @@
         <div class="wrap">
           <p class="eyebrow rv">Clinic film</p>
           <h2 class="rv">Step inside our clinic</h2>
-          <div class="wcard rv">
+          <div class="wcard rv video-card">
             <video
               class="clinic-video"
-              controls
+              autoplay
+              muted
+              loop
               playsinline
-              preload="none"
+              disablepictureinpicture
+              preload="auto"
               poster="assets/imgi_3_20241112_203848-m6Ljy9yznQigZ5bG.jpg"
+              aria-label="Clinic preview video playing automatically without sound"
             >
               <source
                 src="assets/Dr. Jamodkars Advanced Root Canal Multispeciality Dental Clinic.mp4"
@@ -932,7 +936,7 @@
     </main>
     <footer>
       <div class="wrap fgrid">
-        <div>
+        <div class="f-brand">
           <a class="logo" href="#home"
             ><span class="logo-mark">🦷</span
             ><span
@@ -978,18 +982,28 @@
             · <a href="#" style="display: inline">Terms</a>
           </p>
         </div>
-        <div>
-          <b>Quick Links</b><a href="#home">Home</a><a href="#about">About</a
+        <div class="f-col">
+          <button class="f-head" aria-expanded="false" aria-controls="fLinks1">
+            <span>Quick Links</span><span class="f-arrow" aria-hidden="true">+</span>
+          </button>
+          <div class="f-links" id="fLinks1">
+            <a href="#home">Home</a><a href="#about">About</a
           ><a href="#treatments">Treatments</a><a href="#doctors">Doctors</a
           ><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+          </div>
         </div>
-        <div>
-          <b>Patient Care</b><a href="#book">Book Appointment</a
+        <div class="f-col">
+          <button class="f-head" aria-expanded="false" aria-controls="fLinks2">
+            <span>Patient Care</span><span class="f-arrow" aria-hidden="true">+</span>
+          </button>
+          <div class="f-links" id="fLinks2">
+            <a href="#book">Book Appointment</a
           ><a href="#contact" data-tel>Call Clinic</a
           ><a href="#contact" data-wa>WhatsApp</a
           ><a data-maps target="_blank" rel="noopener" href="#"
             >Get Directions</a
           >
+          </div>
         </div>
       </div>
     </footer>

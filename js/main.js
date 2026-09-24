@@ -19,6 +19,22 @@
     document.getElementById('year').textContent=new Date().getFullYear();
   }
   bindLinks();
+  // Clinic video: GIF-like autoplay (muted, loop, no controls)
+  (function(){
+    const v=document.querySelector('.clinic-video');
+    if(!v) return;
+    v.muted=true; v.defaultMuted=true; v.loop=true; v.controls=false;
+    const tryPlay=()=>{ v.play?.().catch(()=>{}); };
+    tryPlay();
+    // Play only when visible (saves battery), pause off-screen
+    if('IntersectionObserver' in window){
+      new IntersectionObserver((es)=>{
+        es.forEach(e=>{ if(e.isIntersecting) tryPlay(); else v.pause?.(); });
+      },{threshold:.25}).observe(v);
+    }
+    // iOS/Safari: resume on first touch
+    addEventListener('touchend',tryPlay,{passive:true});
+  })();
   // Custom cursor (desktop, fine pointer only)
   if(matchMedia('(pointer:fine)').matches && !matchMedia('(max-width:768px)').matches){
     const dot=document.getElementById('cursorDot'), ring=document.getElementById('cursorRing');
