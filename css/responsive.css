@@ -13,6 +13,7 @@
   .fgrid{grid-template-columns:1fr}
   form.book-grid{grid-template-columns:1fr}
   .ggrid{grid-template-columns:repeat(2,1fr)}
+  #docGrid,.grid6.cols-2{grid-template-columns:1fr}
   .mobile-cta{display:grid}
   footer{padding-bottom:170px}
   .floats{bottom:150px}
@@ -21,7 +22,7 @@
   section{padding:60px 0}
 }
 @media(max-width:520px){
-  .grid6,.tgrid,.ggrid{grid-template-columns:1fr}
+  .grid6,.grid6.cols-2,#techGrid,#docGrid,.tgrid,.ggrid{grid-template-columns:1fr}
   .trust{grid-template-columns:1fr}
   .hero-cta .btn{flex:1;justify-content:center}
   .loc-card iframe{height:240px}
